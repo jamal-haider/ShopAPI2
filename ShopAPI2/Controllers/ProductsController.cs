@@ -44,7 +44,7 @@ namespace ShopAPI2.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateBook([FromBody] ProductModel pmodel, [FromRoute] int id)
+        public async Task<IActionResult> Update([FromBody] ProductModel pmodel, [FromRoute] int id)
         {
             await _productRepository.Update(id, pmodel);
             return Ok();
